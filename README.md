@@ -1,24 +1,24 @@
 # Laravel BATCH (BULK)
 Insert and update batch (bulk) in laravel
 
-[![License](https://poser.pugx.org/mavinoo/laravel-batch/license)](https://packagist.org/packages/mavinoo/laravel-batch)
-[![Latest Stable Version](https://poser.pugx.org/mavinoo/laravel-batch/v/stable)](https://packagist.org/packages/mavinoo/laravel-batch)
-[![Total Downloads](https://poser.pugx.org/mavinoo/laravel-batch/downloads)](https://packagist.org/packages/mavinoo/laravel-batch)
-[![Daily Downloads](https://poser.pugx.org/mavinoo/laravel-batch/d/daily)](https://packagist.org/packages/mavinoo/laravel-batch)
+[![License](https://poser.pugx.org/digital-splash/laravel-batch/license)](https://packagist.org/packages/digital-splash/laravel-batch)
+[![Latest Stable Version](https://poser.pugx.org/digital-splash/laravel-batch/v/stable)](https://packagist.org/packages/digital-splash/laravel-batch)
+[![Total Downloads](https://poser.pugx.org/digital-splash/laravel-batch/downloads)](https://packagist.org/packages/digital-splash/laravel-batch)
+[![Daily Downloads](https://poser.pugx.org/digital-splash/laravel-batch/d/daily)](https://packagist.org/packages/digital-splash/laravel-batch)
 
 
 # Install
-`composer require mavinoo/laravel-batch`
+`composer require digital-splash/laravel-batch`
 
 # Service Provider
 file app.php in array providers :
 
-`Mavinoo\Batch\BatchServiceProvider::class,`
+`DigitalSplash\Batch\BatchServiceProvider::class,`
 
 # Aliases
 file app.php in array aliases :
 
-`'Batch' => Mavinoo\Batch\BatchFacade::class,`
+`'Batch' => DigitalSplash\Batch\BatchFacade::class,`
 
 # Example Update 1
 
@@ -30,12 +30,12 @@ $value = [
      [
          'id' => 1,
          'status' => 'active',
-         'nickname' => 'Mohammad'
+         'nickname' => 'digital'
      ] ,
      [
          'id' => 5,
          'status' => 'deactive',
-         'nickname' => 'Ghanbari'
+         'nickname' => 'splash'
      ] ,
 ];
 $index = 'id';
@@ -57,7 +57,7 @@ $value = [
      [
          'id' => 5,
          'status' => 'deactive',
-         'nickname' => 'Ghanbari'
+         'nickname' => 'digital'
      ],
      [
          'id' => 10,
@@ -66,7 +66,7 @@ $value = [
      ],
      [
          'id' => 11,
-         'username' => 'mavinoo'
+         'username' => 'splash'
      ]
 ];
 $index = 'id';
@@ -122,23 +122,23 @@ $columns = [
 ];
 $values = [
      [
-         'Mohammad',
-         'Ghanbari',
-         'emailSample_1@gmail.com',
+         'Mario',
+         'Rawady',
+         'rawadymario@dgsplash.com',
          '1',
          '0',
      ] ,
      [
-         'Saeed',
-         'Mohammadi',
-         'emailSample_2@gmail.com',
+         'Super',
+         'Admin',
+         'superadmin@dgsplash.com',
          '1',
          '0',
      ] ,
      [
-         'Avin',
-         'Ghanbari',
-         'emailSample_3@gmail.com',
+         'Normal',
+         'Admin',
+         'normaladmin@dgsplash.com',
          '1',
          '0',
      ] ,
@@ -168,7 +168,7 @@ Add `HasBatch` trait into model:
 ```php
 namespace App\Models;
 
-use Mavinoo\Batch\Traits\HasBatch;
+use DigitalSplash\Batch\Traits\HasBatch;
 
 class User extends Model
 {
@@ -204,9 +204,4 @@ $result = batch()->insert($userInstance, $columns, $values, $batchSize);
 # Tests
 If you don't have phpunit installed on your project, first run `composer require phpunit/phpunit`
 
-In the root of your laravel app, run `./vendor/bin/phpunit ./vendor/mavinoo/laravel-batch/tests`
-
-# Donate 
-BTC Address: 14XQEuVKuZp8q59h3Jk9Q2wi45368aEbyG
-
-DOGE Address: DMsFurgSP2LTny8wkco3cE3ZhgQrFAJLp8
+In the root of your laravel app, run `./vendor/bin/phpunit ./vendor/digital-splash/laravel-batch/tests`

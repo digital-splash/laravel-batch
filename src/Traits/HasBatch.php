@@ -1,8 +1,8 @@
 <?php declare(strict_types=1);
 
-namespace Mavinoo\Batch\Traits;
+namespace DigitalSplash\Batch\Traits;
 
-use Mavinoo\Batch\Batch;
+use DigitalSplash\Batch\Batch;
 
 trait HasBatch
 {

@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace Mavinoo\Batch;
+namespace DigitalSplash\Batch;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Database\DatabaseManager;

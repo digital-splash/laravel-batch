@@ -1,23 +1,26 @@
 {
-    "name": "mavinoo/laravel-batch",
+    "name": "digital-splash/laravel-batch",
     "description": "Insert and update batch (bulk) in laravel",
     "type": "library",
     "license": "MIT",
     "authors": [
         {
-            "name": "Mohammad Ghanbari",
-            "email": "mavin.developer@gmail.com"
+            "name": "Mario Rawady",
+            "email": "rawady_mario@hotmail.com"
         }
     ],
     "require": {
-      "ext-json": "*"
+        "ext-json": "*",
+        "illuminate/database": "^8.83",
+        "nesbot/carbon": "2.x-dev",
+        "illuminate/support": "8.x-dev"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.3@dev"
     },
     "autoload": {
         "psr-4": {
-            "Mavinoo\\Batch\\": "src/"
+            "DigitalSplash\\Batch\\": "src/"
         },
         "files": [
             "src/Common/Helpers.php"
@@ -26,10 +29,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Mavinoo\\Batch\\BatchServiceProvider"
+                "DigitalSplash\\Batch\\BatchServiceProvider"
             ],
             "aliases": {
-                "Batch": "Mavinoo\\Batch\\BatchFacade"
+                "Batch": "DigitalSplash\\Batch\\BatchFacade"
             }
         }
     },
